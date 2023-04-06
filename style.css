@@ -1,0 +1,238 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap");
+:root {
+  /* primary colors*/
+  --Soft-orange: hsl(35, 77%, 62%);
+  --Soft-red: hsl(5, 85%, 63%);
+
+  /* neutral colors*/
+  --Off-white: hsl(36, 100%, 99%);
+  --Grayish-blue: hsl(233, 8%, 79%);
+  --Dark-grayish-blue: hsl(236, 13%, 42%);
+  --Very-dark-blue: hsl(240, 100%, 5%);
+
+  --transition: 0.3s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+body {
+  font-size: 15px;
+  font-family: "Inter", sans-serif;
+}
+ul {
+  list-style: none;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/*small*/
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+/* start headr  */
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+header .container nav ul {
+  display: flex;
+}
+header .container nav ul li {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  padding-right: 1rem;
+  cursor: pointer;
+  transition: 0.5s;
+  height: 70px;
+}
+header .container nav ul li:hover {
+  color: var(--Soft-red);
+}
+header .container nav > .img {
+  display: none;
+}
+@media (width > 768px) {
+  #closeIcon {
+    display: none;
+  }
+}
+@media (max-width: 767px) {
+  header .container nav ul {
+    position: absolute;
+    right: 0;
+    background: white;
+    top: -100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+    width: 50%;
+    transition: 0.5s;
+    box-shadow: 0 -2px 2px 0px black;
+  }
+  header .container nav ul li {
+    padding-right: 0;
+    padding-bottom: 35px;
+    height: 0;
+  }
+  header .container nav > .img {
+    display: block;
+    cursor: pointer;
+  }
+  #closeIcon {
+    width: 25px;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    cursor: pointer;
+  }
+}
+/* end headr  */
+/* start head-lines */
+.container {
+  display: flex;
+  gap: 20px;
+}
+@media (width <= 767px) {
+  .container {
+    flex-wrap: wrap;
+  }
+}
+.container .head-lines img {
+  width: 100%;
+}
+@media (width <= 767px) {
+  .info {
+    flex-wrap: wrap;
+  }
+}
+.container .head-lines .info {
+  display: flex;
+  gap: 26px;
+  margin-top: 20px;
+}
+.container .head-lines .info h1 {
+  font-size: 3rem;
+}
+.container .head-lines .info .text p {
+  line-height: 1.4;
+  font-size: 1rem;
+  color: var(--Dark-grayish-blue);
+}
+.container .head-lines .info .text a {
+  margin-top: 10px;
+  display: block;
+  color: var(--Off-white);
+  background-color: var(--Soft-red);
+  width: fit-content;
+  padding: 12px 25px;
+  transition: var(--transition);
+}
+.container .head-lines .info .text a:hover {
+  background-color: var(--Very-dark-blue);
+}
+.container aside {
+  display: flex;
+  background: var(--Very-dark-blue);
+  color: white;
+  padding: 20px;
+  flex-direction: column;
+  gap: 30px;
+}
+.container aside h2 {
+  font-size: 1.8rem;
+  color: var(--Soft-orange);
+  margin-bottom: 15px;
+}
+.container aside article:not(:last-of-type) {
+  border-bottom: 1px solid var(--Grayish-blue);
+  padding-bottom: 30px;
+}
+.container aside article a {
+  display: block;
+  color: var(--Off-white);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+  transition: var(--transition);
+}
+.container aside article a:hover {
+  color: var(--Soft-orange);
+}
+.container aside article p {
+  line-height: 1.4;
+  color: var(--Dark-grayish-blue);
+}
+/* end head-lines */
+/* start sub-news  */
+.sub-news {
+  margin-bottom: 50px;
+}
+.container .box {
+  display: flex;
+  gap: 20px;
+  margin-top: 20px;
+  flex: 1;
+}
+.container .box div {
+  width: 132.02px;
+}
+.container .box div img {
+  width: 100%;
+}
+.container .box .the-new .number {
+  color: var(--Grayish-blue);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.container .box .the-new a {
+  display: block;
+  color: var(--Very-dark-blue);
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  transition: var(--transition);
+}
+.container .box .the-new a:hover {
+  color: var(--Soft-red);
+}
+.container .box .the-new:last-child {
+  flex-basis: 100%;
+  line-height: 1.4;
+  color: var(--Dark-grayish-blue);
+}
+/* end sub-news  */
